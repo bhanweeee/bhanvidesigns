@@ -1,0 +1,432 @@
+
+
+
+
+.menu{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#ffd6eb,#ffe6f2,#fff5fa);
+
+z-index:999;
+
+}
+
+.menu h1{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+
+}
+
+.menu p{
+
+    font-size:24px;
+
+    color:#ff4fa3;
+
+}
+
+.menu button{
+
+    width:300px;
+
+    margin:15px;
+
+}
+.game{
+
+display:none;
+
+}
+}body{
+
+    margin:0;
+
+    font-family:'Quicksand',sans-serif;
+
+    background:linear-gradient(135deg,#ffd6eb,#ffe6f2,#fff5fa);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    overflow-y:auto;
+
+}
+
+h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:55px;
+
+    color:#ff4fa3;
+
+    text-shadow:3px 3px white;
+
+    margin-bottom:5px;
+
+}
+
+
+.subtitle{
+
+font-size:24px;
+
+color:#ff6cab;
+
+margin-top:-20px;
+
+}
+
+.board{
+
+display:grid;
+
+grid-template-columns:repeat(3,120px);
+
+gap:15px;
+
+margin-top:30px;
+
+padding:20px;
+
+background:rgba(255,255,255,.25);
+
+backdrop-filter:blur(15px);
+
+border-radius:30px;
+
+box-shadow:0 15px 35px rgba(255,105,180,.4);
+
+}
+
+.cell{
+
+    width:120px;
+
+    height:120px;
+
+    background:rgba(255,255,255,.9);
+
+    border:3px solid #ffd1e8;
+
+    border-radius:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(255,105,180,.25);
+
+    user-select:none;
+
+}
+
+.cell:hover{
+
+    transform:scale(1.08) rotate(3deg);
+
+    background:#fff0f7;
+
+    box-shadow:0 0 25px hotpink;
+
+}
+.cell:hover{
+
+transform:scale(1.05);
+
+background:#fff0f7;
+ rotate:(4deg);
+
+box-shadow:0 0 25px hotpink;
+}
+
+
+
+#status{
+
+margin-top:35px;
+
+color:#ff4fa3;
+
+}
+
+button{
+
+margin-top:25px;
+
+padding:16px 40px;
+
+background:linear-gradient(45deg,#ff8ac5,#ff4fa3);
+
+color:white;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:0 0 20px pink;
+
+transition:.3s;
+
+}
+button:hover{
+
+background:#ff4fa3;
+
+transform:scale(1.05);
+
+}
+.hearts{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+
+}
+
+.hearts span{
+
+position:absolute;
+font-size:35px;
+animation:float 8s linear infinite;
+opacity:.6;
+
+}
+
+.hearts span:nth-child(1){left:5%; animation-delay:0s;}
+.hearts span:nth-child(2){left:18%; animation-delay:1s;}
+.hearts span:nth-child(3){left:35%; animation-delay:2s;}
+.hearts span:nth-child(4){left:50%; animation-delay:3s;}
+.hearts span:nth-child(5){left:65%; animation-delay:4s;}
+.hearts span:nth-child(6){left:80%; animation-delay:5s;}
+.hearts span:nth-child(7){left:90%; animation-delay:6s;}
+.hearts span:nth-child(8){left:97%; animation-delay:7s;}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-120px) rotate(360deg);
+
+}
+
+}
+.scoreboard{
+
+display:flex;
+
+gap:80px;
+
+margin:25px;
+
+}
+
+.score{
+
+background:white;
+
+padding:15px 30px;
+
+border-radius:20px;
+
+box-shadow:0 8px 20px rgba(255,105,180,.3);
+
+font-size:22px;
+
+text-align:center;
+
+}
+
+.score h2{
+
+margin-top:8px;
+
+color:#ff4fa3;
+
+font-size:35px;
+
+}
+.win{
+
+background:#ffd1e8;
+
+box-shadow:0 0 35px hotpink;
+
+animation:pulse .8s infinite alternate;
+
+}
+
+@keyframes pulse{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+h1{
+
+font-family:'Pacifico',cursive;
+
+}
+.footer{
+
+margin-top:20px;
+
+color:#ff69b4;
+
+font-weight:bold;
+
+}
+.popup{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 0 30px hotpink;
+
+text-align:center;
+
+font-size:30px;
+
+z-index:100;
+
+animation:pop .4s;
+
+}
+
+@keyframes pop{
+
+from{
+
+transform:translate(-50%,-50%) scale(.5);
+
+}
+
+to{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+.mode{
+
+margin:20px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+.mode button{
+
+padding:12px 25px;
+
+font-size:18px;
+
+}
+@keyframes bounce {
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+h1{
+    animation:bounce 2s infinite;
+}
+@media(max-width:768px){
+
+.board{
+
+grid-template-columns:repeat(3,90px);
+
+}
+
+.cell{
+
+width:90px;
+height:90px;
+font-size:45px;
+
+}
+
+h1{
+
+font-size:38px;
+
+}
+
+}
